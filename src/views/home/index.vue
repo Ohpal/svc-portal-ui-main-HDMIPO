@@ -30,7 +30,7 @@
         </div>
       </div>
     </div>
-    <div class="hanhwa-logo-wrap">
+    <div class="title-logo-wrap">
       <!-- <div class="chip-wrap">
         <div
           v-for="(item, idx) in ['Efficenet', 'Safe', 'Transparent', 'Conveient']"
@@ -233,7 +233,7 @@ onMounted(() => {
   align-items: center;
   justify-content: space-between;
   padding-top: 40px;
-  .hanhwa-logo-wrap {
+  .title-logo-wrap {
     width: 100%;
     position: fixed;
     left: 0;

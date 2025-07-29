@@ -396,7 +396,7 @@ function onChangeOptions(value: any) {
     width: 100%;
     height: 56px;
     border-top: 1px solid rgba(0, 0, 0, 0.08);
-    background: #fff url('@/assets/img/logo_hanwha.svg') center center no-repeat;
+    background: #fff url('@/assets/img/hd_logo.png') center center no-repeat;
     background-size: 140px 28px;
   }
   &.v-navigation-drawer--rail {
