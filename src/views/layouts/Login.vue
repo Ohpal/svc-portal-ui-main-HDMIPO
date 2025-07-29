@@ -2,7 +2,7 @@
   <div class="login-wrap">
     <div class="half-sec bg-wrap">
       <img
-        src="@/assets/img/background_login2.png"
+        src="@/assets/img/bg_mipo.png"
         width="100%"
         height="100%"
         alt="hd_logo"
