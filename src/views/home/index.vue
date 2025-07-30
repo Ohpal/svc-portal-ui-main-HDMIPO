@@ -2,7 +2,7 @@
   <div class="home-wrap">
     <div class="home-main-wrap">
       <div class="top-text-wrap">
-        <div class="title-logo-wrap">
+        <div class="top-logo-wrap">
           <img
             src="@/assets/img/title_logo_new.png"
             width="600px"
@@ -337,7 +337,7 @@ onMounted(() => {
     }
   }
 }
-.title-logo-wrap {
+.top-logo-wrap {
   width: 100%;
   margin-bottom: 1rem;
 }
