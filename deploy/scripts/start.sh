@@ -25,4 +25,6 @@ analysis_api='http://localhost:4800' \
 dbdata='http://localhost:4800' \
 synth_data='http://localhost:4800' \
 mrc_api='http://localhost:4900' \
+mrc_api_amsvdr='http://localhost:4900' \
+mrc_api_shipinfo='http://localhost:4900' \
 node /home/tapp/PKG/service/svc-portal-ui/server.js

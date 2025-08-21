@@ -202,6 +202,16 @@ app.use(
     changeOrigin: true,
     onError: onError
   }),
+  createProxyMiddleware('/mrc-api-amsvdr', {
+    target: `${process.env.mrc_api_amsvdr}`,
+    changeOrigin: true,
+    onError: onError
+  }),
+  createProxyMiddleware('/mrc-api-shipinfo', {
+    target: `${process.env.mrc_api_shipinfo}`,
+    changeOrigin: true,
+    onError: onError
+  }),
   createProxyMiddleware('/dbdata', {
     target: `${process.env.dbdata}`,
     changeOrigin: true,

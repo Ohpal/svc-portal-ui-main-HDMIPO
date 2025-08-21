@@ -144,6 +144,14 @@ export default defineConfig(({ command, mode }) => {
         '/mrc-api': {
           target: 'http://10.150.231.96:4900',
           changeOrigin: true
+        },
+        '/mrc-api-amsvdr': {
+          target: 'http://10.150.231.96:9092',
+          changeOrigin: true
+        },
+        '/mrc-api-shipinfo': {
+          target: 'http://10.150.231.97:32005',
+          changeOrigin: true
         }
         // '/monitoring': {
         //   target: 'http://rims.iptime.org:4900',
