@@ -118,7 +118,7 @@ export default defineConfig(({ command, mode }) => {
           changeOrigin: true
         },
         '/api': {
-          target: 'http://rims.iptime.org:4600',
+          target: 'http://10.150.231.96:4600',
           changeOrigin: true
         },
         '/kdt-api': {

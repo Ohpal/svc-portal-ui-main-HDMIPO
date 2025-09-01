@@ -28,6 +28,8 @@ interface ImportMetaEnv {
   readonly analysis_api: string;
   readonly synth_data: string;
   readonly mrc_api: string;
+  readonly mrc_api_amsvdr: string;
+  readonly mrc_api_shipinfo: string;
 }
 
 interface ImportMeta {
