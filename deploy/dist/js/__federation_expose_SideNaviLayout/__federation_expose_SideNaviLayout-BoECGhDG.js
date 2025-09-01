@@ -4117,7 +4117,7 @@ const VNavigationDrawer = genericComponent()({
   }
 });
 const { defineComponent: _defineComponent } = await importShared("vue");
-const { resolveComponent: _resolveComponent, createVNode: _createVNode, unref: _unref, openBlock: _openBlock, createBlock: _createBlock, createCommentVNode: _createCommentVNode, createElementVNode: _createElementVNode, toDisplayString: _toDisplayString, withCtx: _withCtx, renderSlot: _renderSlot, Fragment: _Fragment, createElementBlock: _createElementBlock } = await importShared("vue");
+const { resolveComponent: _resolveComponent, createVNode: _createVNode, createElementVNode: _createElementVNode, toDisplayString: _toDisplayString, withCtx: _withCtx, unref: _unref, renderSlot: _renderSlot, openBlock: _openBlock, createBlock: _createBlock, createCommentVNode: _createCommentVNode, Fragment: _Fragment, createElementBlock: _createElementBlock } = await importShared("vue");
 const _hoisted_1 = { class: "time-wrap" };
 const _hoisted_2 = { class: "dialog-body" };
 const _hoisted_3 = { class: "dialog-body" };
@@ -4149,7 +4149,7 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
     const LoadingStore = useLoadingStore();
     const ship = computed(() => shipStore.shipInfo);
     ref(null);
-    const shipList = computed(() => shipStore.shipList);
+    computed(() => shipStore.shipList);
     const visible = computed({
       get() {
         return LoadingStore.getLoading();
@@ -4405,7 +4405,6 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
     }
     return (_ctx, _cache) => {
       const _component_loading_dialog = _resolveComponent("loading-dialog");
-      const _component_BaseAutocomplete = _resolveComponent("BaseAutocomplete");
       const _component_BaseBreadCrumb = _resolveComponent("BaseBreadCrumb");
       const _component_BaseDialog = _resolveComponent("BaseDialog");
       return _openBlock(), _createElementBlock(_Fragment, null, [
@@ -4438,22 +4437,8 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
                 })
               ]),
               append: _withCtx(() => [
-                company.value !== null && platform.value === "onshore" && userSessionInfo.value.userId !== "masteradmin" ? (_openBlock(), _createBlock(_component_BaseAutocomplete, {
-                  key: 0,
-                  items: shipList.value,
-                  modelValue: ship.value,
-                  "onUpdate:modelValue": [
-                    _cache[1] || (_cache[1] = ($event) => ship.value = $event),
-                    _unref(shipStore).setShipInfo
-                  ],
-                  "item-title": "shipId",
-                  placeholder: "Select a ship name",
-                  width: "180",
-                  "return-object": "",
-                  "hide-details": ""
-                }, null, 8, ["items", "modelValue", "onUpdate:modelValue"])) : _createCommentVNode("", true),
                 _createElementVNode("div", _hoisted_1, [
-                  _cache[7] || (_cache[7] = _createElementVNode("i", { class: "mdi-clock-time-three-outline" }, null, -1)),
+                  _cache[6] || (_cache[6] = _createElementVNode("i", { class: "mdi-clock-time-three-outline" }, null, -1)),
                   _createElementVNode("p", null, _toDisplayString(now.value.format("YYYY-MM-DD HH:mm:ss")), 1)
                 ]),
                 _createVNode(HeaderButtons)
@@ -4463,7 +4448,7 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
             _createVNode(VNavigationDrawer, {
               class: "app-side-nav",
               modelValue: navidrawer.value,
-              "onUpdate:modelValue": _cache[6] || (_cache[6] = ($event) => navidrawer.value = $event),
+              "onUpdate:modelValue": _cache[5] || (_cache[5] = ($event) => navidrawer.value = $event),
               rail: navidrawer.rail,
               order: "0",
               width: "240",
@@ -4475,11 +4460,11 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
                 _createVNode(VList, {
                   class: "gnb",
                   selected: navidrawer.selected,
-                  "onUpdate:selected": _cache[2] || (_cache[2] = ($event) => navidrawer.selected = $event),
+                  "onUpdate:selected": _cache[1] || (_cache[1] = ($event) => navidrawer.selected = $event),
                   opened: navidrawer.open,
-                  "onUpdate:opened": _cache[3] || (_cache[3] = ($event) => navidrawer.open = $event),
-                  onClick: _cache[4] || (_cache[4] = ($event) => navidrawer.rail = false),
-                  "onClick:open": _cache[5] || (_cache[5] = ($event) => navidrawer.rail = false),
+                  "onUpdate:opened": _cache[2] || (_cache[2] = ($event) => navidrawer.open = $event),
+                  onClick: _cache[3] || (_cache[3] = ($event) => navidrawer.rail = false),
+                  "onClick:open": _cache[4] || (_cache[4] = ($event) => navidrawer.rail = false),
                   nav: "",
                   "open-strategy": "single"
                 }, {
@@ -4492,10 +4477,10 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
                   ]),
                   _: 1
                 }, 8, ["selected", "opened"]),
-                _cache[8] || (_cache[8] = _createElementVNode("div", { class: "logo" }, null, -1))
+                _cache[7] || (_cache[7] = _createElementVNode("div", { class: "logo" }, null, -1))
               ]),
               _: 1,
-              __: [8]
+              __: [7]
             }, 8, ["modelValue", "rail"]),
             _createVNode(VMain, null, {
               default: _withCtx(() => [
@@ -4581,7 +4566,7 @@ const _sfc_main = /* @__PURE__ */ _defineComponent({
     };
   }
 });
-const SideNaviLayout = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-97c4bddb"]]);
+const SideNaviLayout = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-dbfd7d41"]]);
 export {
   makeLocationProps as A,
   required as B,

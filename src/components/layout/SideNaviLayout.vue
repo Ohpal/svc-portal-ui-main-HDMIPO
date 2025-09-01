@@ -48,7 +48,7 @@
       </template>
 
       <template #append>
-        <BaseAutocomplete
+        <!-- <BaseAutocomplete
           v-if="company !== null && platform === 'onshore' && userSessionInfo.userId !== 'masteradmin'"
           :items="shipList"
           v-model="ship"
@@ -58,7 +58,7 @@
           width="180"
           return-object
           hide-details
-        />
+        /> -->
         <div class="time-wrap">
           <i class="mdi-clock-time-three-outline"></i>
           <p>{{ now.format('YYYY-MM-DD HH:mm:ss') }}</p>

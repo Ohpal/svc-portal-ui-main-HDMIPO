@@ -5,8 +5,8 @@ let moduleMap = {
     return __federation_import("./../js/__federation_expose_Axios/__federation_expose_Axios-BG-6nOb8.js").then((module) => Object.keys(module).every((item) => exportSet.has(item)) ? () => module.default : () => module);
   },
   "./SideNaviLayout": () => {
-    dynamicLoadingCss(["__federation_expose_SideNaviLayout-DbZivb3p.__federation_expose_SideNaviLayout.css","__federation_expose_SideMenuItem-4h_gnczk.__federation_expose_SideMenuItem.css"], false, "./SideNaviLayout");
-    return __federation_import("./../js/__federation_expose_SideNaviLayout/__federation_expose_SideNaviLayout-BTgJlWcY.js").then((module) => Object.keys(module).every((item) => exportSet.has(item)) ? () => module.default : () => module);
+    dynamicLoadingCss(["__federation_expose_SideNaviLayout-Cysfh7DN.__federation_expose_SideNaviLayout.css","__federation_expose_SideMenuItem-4h_gnczk.__federation_expose_SideMenuItem.css"], false, "./SideNaviLayout");
+    return __federation_import("./../js/__federation_expose_SideNaviLayout/__federation_expose_SideNaviLayout-BoECGhDG.js").then((module) => Object.keys(module).every((item) => exportSet.has(item)) ? () => module.default : () => module);
   },
   "./SideMenuItem": () => {
     dynamicLoadingCss(["__federation_expose_SideMenuItem-4h_gnczk.__federation_expose_SideMenuItem.css"], false, "./SideMenuItem");
