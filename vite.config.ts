@@ -18,38 +18,38 @@ export default defineConfig(({ command, mode }) => {
         // https://api.allsilver.com/hello로 요청이 되는 것이다.
         '^/krakend': {
           // 프록시가 적용될 요청 경로의 시작 부분. 클라이언트가 보낸 요청의 URL이 api로 시작되면 이 설정이 적용된다.
-          target: 'http://host.docker.internal:9092', // 사용할 요청 도메인을 설정한다.
+          target: 'http://10.150.231.97:9092', // 사용할 요청 도메인을 설정한다.
           changeOrigin: true, // HTTP 요청 헤더의 Host 값을 서버의 호스트와 일치하도록 변경한다. 이를 통해 클라이언트의 요청을 target에 설정된 도메인에서 온 것 처럼 변경할 수 있다.
           rewrite: (path) => path.replace(/^\/krakend/, '') // 프록시 요청의 경로를 재작성하는 함수를 설정한다.
         },
         '^/countries': {
           // 프록시가 적용될 요청 경로의 시작 부분. 클라이언트가 보낸 요청의 URL이 api로 시작되면 이 설정이 적용된다.
-          target: 'http://host.docker.internal:9091', // 사용할 요청 도메인을 설정한다.
+          target: 'http://10.150.231.97:9091', // 사용할 요청 도메인을 설정한다.
           changeOrigin: true // HTTP 요청 헤더의 Host 값을 서버의 호스트와 일치하도록 변경한다. 이를 통해 클라이언트의 요청을 target에 설정된 도메인에서 온 것 처럼 변경할 수 있다.
         },
         '^/timezone': {
           // 프록시가 적용될 요청 경로의 시작 부분. 클라이언트가 보낸 요청의 URL이 api로 시작되면 이 설정이 적용된다.
-          target: 'http://host.docker.internal:9091', // 사용할 요청 도메인을 설정한다.
+          target: 'http://10.150.231.97:9091', // 사용할 요청 도메인을 설정한다.
           changeOrigin: true // HTTP 요청 헤더의 Host 값을 서버의 호스트와 일치하도록 변경한다. 이를 통해 클라이언트의 요청을 target에 설정된 도메인에서 온 것 처럼 변경할 수 있다.
         },
         '^/api/v1/ws': {
-          target: 'http://host.docker.internal:9000', // 사용할 요청 도메인을 설정한다.
+          target: 'http://10.150.231.97:9000', // 사용할 요청 도메인을 설정한다.
           changeOrigin: true,
           ws: true
         },
         '^/svc-seer': {
-          target: 'http://host.docker.internal:32055', // 사용할 요청 도메인을 설정한다.
+          target: 'http://10.150.231.97:32055', // 사용할 요청 도메인을 설정한다.
           changeOrigin: true
         },
         '^/voyageMedia': {
           // 프록시가 적용될 요청 경로의 시작 부분. 클라이언트가 보낸 요청의 URL이 api로 시작되면 이 설정이 적용된다.
-          target: 'http://host.docker.internal:32010', // 사용할 요청 도메인을 설정한다.
+          target: 'http://10.150.231.97:32010', // 사용할 요청 도메인을 설정한다.
           changeOrigin: true // HTTP 요청 헤더의 Host 값을 서버의 호스트와 일치하도록 변경한다. 이를 통해 클라이언트의 요청을 target에 설정된 도메인에서 온 것 처럼 변경할 수 있다.
           // rewrite: (path) => path.replace(/^\/api/, '/svcfw/api') // 프록시 요청의 경로를 재작성하는 함수를 설정한다.
         },
         '^/geotarget': {
           // 프록시가 적용될 요청 경로의 시작 부분. 클라이언트가 보낸 요청의 URL이 api로 시작되면 이 설정이 적용된다.
-          target: 'http://host.docker.internal:7080', // 사용할 요청 도메인을 설정한다.
+          target: 'http://10.150.231.97:7080', // 사용할 요청 도메인을 설정한다.
           changeOrigin: true, // HTTP 요청 헤더의 Host 값을 서버의 호스트와 일치하도록 변경한다. 이를 통해 클라이언트의 요청을 target에 설정된 도메인에서 온 것 처럼 변경할 수 있다.
           rewrite: (path) => path.replace(/^\/geotarget/, '') // 프록시 요청의 경로를 재작성하는 함수를 설정한다.
         },
@@ -97,7 +97,7 @@ export default defineConfig(({ command, mode }) => {
         // },
         '^/VITE_SETTING_TARGET': {
           // 프록시가 적용될 요청 경로의 시작 부분. 클라이언트가 보낸 요청의 URL이 api로 시작되면 이 설정이 적용된다.
-          target: 'http://host.docker.internal:32100', // 사용할 요청 도메인을 설정한다.
+          target: 'http://10.150.231.97:32100', // 사용할 요청 도메인을 설정한다.
           changeOrigin: true, // HTTP 요청 헤더의 Host 값을 서버의 호스트와 일치하도록 변경한다. 이를 통해 클라이언트의 요청을 target에 설정된 도메인에서 온 것 처럼 변경할 수 있다.
           rewrite: (path) => path.replace(/^\/VITE_SETTING_TARGET/, '') // 프록시 요청의 경로를 재작성하는 함수를 설정한다.
         },
@@ -114,43 +114,43 @@ export default defineConfig(({ command, mode }) => {
         //   // rewrite: (path) => path.replace(/^\/VITE_SETTING_TARGET/, '') // 프록시 요청의 경로를 재작성하는 함수를 설정한다.
         // }
         '/rims-api': {
-          target: 'http://host.docker.internal:4500',
+          target: 'http://10.150.231.96:4500',
           changeOrigin: true
         },
         '/api': {
-          target: 'http://host.docker.internal:4600',
+          target: 'http://10.150.231.96:4600',
           changeOrigin: true
         },
         '/kdt-api': {
-          target: 'http://host.docker.internal:4700',
+          target: 'http://10.150.231.96:4700',
           changeOrigin: true
         },
         '/unity': {
-          target: 'http://host.docker.internal:4700',
+          target: 'http://10.150.231.96:4700',
           changeOrigin: true
         },
         '/dbdata': {
-          target: 'http://host.docker.internal:4800',
+          target: 'http://10.150.231.96:4800',
           changeOrigin: true
         },
         '/analysis-api': {
-          target: 'http://host.docker.internal:4800',
+          target: 'http://10.150.231.96:4800',
           changeOrigin: true
         },
         '/synth-data': {
-          target: 'http://host.docker.internal:4800',
+          target: 'http://10.150.231.96:4800',
           changeOrigin: true
         },
         '/mrc-api': {
-          target: 'http://host.docker.internal:4900',
+          target: 'http://10.150.231.96:4900',
           changeOrigin: true
         },
         '/mrc-api-amsvdr': {
-          target: 'http://host.docker.internal:9092',
+          target: 'http://10.150.231.96:9092',
           changeOrigin: true
         },
         '/mrc-api-shipinfo': {
-          target: 'http://host.docker.internal:32005',
+          target: 'http://10.150.231.97:32005',
           changeOrigin: true
         }
         // '/monitoring': {
@@ -185,11 +185,11 @@ export default defineConfig(({ command, mode }) => {
           // 'svc-safety': `/VITE_SAFETY_TARGET/assets/remoteEntry.js`,
           // 'svc-fleet': `/VITE_FLEET_TARGET/assets/remoteEntry.js`,
           'svc-setting': `/VITE_SETTING_TARGET/assets/remoteEntry.js`,
-          'svc-lesson': `http://host.docker.internal:4500/assets/remoteEntry.js`,
-          'svc-xinnos': `http://host.docker.internal:4600/assets/remoteEntry.js`,
-          'svc-kdt': `http://host.docker.internal:4700/assets/remoteEntry.js`,
-          'svc-vegas': `http://host.docker.internal:4800/assets/remoteEntry.js`,
-          'svc-mrc': `http://host.docker.internal2:4900/assets/remoteEntry.js`
+          'svc-lesson': `http://10.150.231.96:4500/assets/remoteEntry.js`,
+          'svc-xinnos': `http://10.150.231.96:4600/assets/remoteEntry.js`,
+          'svc-kdt': `http://10.150.231.96:4700/assets/remoteEntry.js`,
+          'svc-vegas': `http://10.150.231.96:4800/assets/remoteEntry.js`,
+          'svc-mrc': `http://10.150.231.96:4900/assets/remoteEntry.js`
         },
         shared: ['vue', 'pinia', 'vue-router', 'dayjs', 'axios', 'vue3-apexcharts']
       })

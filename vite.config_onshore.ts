@@ -114,39 +114,39 @@ export default defineConfig(({ command, mode }) => {
         //   // rewrite: (path) => path.replace(/^\/VITE_SETTING_TARGET/, '') // 프록시 요청의 경로를 재작성하는 함수를 설정한다.
         // }
         '/rims-api': {
-          target: 'http://10.150.231.96:4500',
+          target: 'http://10.150.192.22:4500',
           changeOrigin: true
         },
         '/api': {
-          target: 'http://10.150.231.96:4600',
+          target: 'http://10.150.192.22:4600',
           changeOrigin: true
         },
         '/kdt-api': {
-          target: 'http://10.150.231.96:4700',
+          target: 'http://10.150.192.22:4700',
           changeOrigin: true
         },
         '/unity': {
-          target: 'http://10.150.231.96:4700',
+          target: 'http://10.150.192.22:4700',
           changeOrigin: true
         },
         '/dbdata': {
-          target: 'http://10.150.231.96:4800',
+          target: 'http://10.150.192.22:4800',
           changeOrigin: true
         },
         '/analysis-api': {
-          target: 'http://10.150.231.96:4800',
+          target: 'http://10.150.192.22:4800',
           changeOrigin: true
         },
         '/synth-data': {
-          target: 'http://10.150.231.96:4800',
+          target: 'http://10.150.192.22:4800',
           changeOrigin: true
         },
         '/mrc-api': {
-          target: 'http://10.150.231.96:4900',
+          target: 'http://10.150.192.22:4900',
           changeOrigin: true
         },
         '/mrc-api-amsvdr': {
-          target: 'http://10.150.231.96:9092',
+          target: 'http://10.150.192.22:9092',
           changeOrigin: true
         },
         '/mrc-api-shipinfo': {
@@ -185,11 +185,11 @@ export default defineConfig(({ command, mode }) => {
           // 'svc-safety': `/VITE_SAFETY_TARGET/assets/remoteEntry.js`,
           // 'svc-fleet': `/VITE_FLEET_TARGET/assets/remoteEntry.js`,
           'svc-setting': `/VITE_SETTING_TARGET/assets/remoteEntry.js`,
-          'svc-lesson': `http://10.150.231.96:4500/assets/remoteEntry.js`,
-          'svc-xinnos': `http://10.150.231.96:4600/assets/remoteEntry.js`,
-          'svc-kdt': `http://10.150.231.96:4700/assets/remoteEntry.js`,
-          'svc-vegas': `http://10.150.231.96:4800/assets/remoteEntry.js`,
-          'svc-mrc': `http://10.150.231.96:4900/assets/remoteEntry.js`
+          'svc-lesson': `http://host.docker.internal:4500/assets/remoteEntry.js`,
+          'svc-xinnos': `http://host.docker.internal:4600/assets/remoteEntry.js`,
+          'svc-kdt': `http://host.docker.internal:4700/assets/remoteEntry.js`,
+          'svc-vegas': `http://host.docker.internal:4800/assets/remoteEntry.js`,
+          'svc-mrc': `http://host.docker.internal2:4900/assets/remoteEntry.js`
         },
         shared: ['vue', 'pinia', 'vue-router', 'dayjs', 'axios', 'vue3-apexcharts']
       })
