@@ -20,13 +20,8 @@ export const useShipStore = defineStore('ship', () => {
         }).then(response => {
             const ship = getShipInfo();
             if (ship) {
-              const selected = response.data.rows.filter((e) => e.shipId === ship.shipId);
-
-              if (selected.length < 1) {
-                  setShipInfo(null);
-              } else {
-                  setShipInfo(selected[0])
-              }
+                const selected = response.data.rows.filter((e) => e.shipId === ship.shipId);
+                setShipInfo(selected[0]);
             }
 
             window.SHARE_DATA.shipList = response.data.rows
