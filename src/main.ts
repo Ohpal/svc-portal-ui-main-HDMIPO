@@ -20,6 +20,8 @@ import 'ant-design-vue/dist/reset.css';
 
 import VueApexCharts from 'vue3-apexcharts';
 
+import vDash from '@/plugins/dash_directive.ts';
+
 const app = createApp(App);
 app.config.globalProperties.$axios = axiosInstance;
 
@@ -40,6 +42,7 @@ app.use(createPinia());
 app.use(i18nInstance);
 app.use(vuetify);
 app.use(Antd); // ant design
+app.directive('dash', vDash);
 app.use(VueApexCharts);
 
 registerPlugins(app);

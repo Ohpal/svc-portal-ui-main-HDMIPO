@@ -668,6 +668,9 @@ function getUpdateTime() {
 .v-main {
   max-height: calc(100vh - 64px);
   // overflow-y: auto;  // monitoring 화면 scroll 문제로 overflow-y 직접 넣지 않고 메뉴 route 될 때 지정하도록 변경
+
+  --v-layout-left: 230px !important; /* 좌측 offset을 원하는 값으로 변경 */
+  --v-layout-top: 40px !important;
 }
 
 .full-screen-layout {
